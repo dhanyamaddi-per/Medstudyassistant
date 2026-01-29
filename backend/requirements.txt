@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+
+chromadb
+sentence-transformers
+pypdf
+
+langchain
+langchain-community
+langchain-text-splitters
+
+crewai
