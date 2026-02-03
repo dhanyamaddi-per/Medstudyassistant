@@ -1,4 +1,18 @@
+# Python venv
 .venv/
+venv/
+
+# Uploads / user files (big binaries)
+backend/storage/uploads/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
 # Logs
 logs
 *.log
