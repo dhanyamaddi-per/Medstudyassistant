@@ -72,29 +72,49 @@ python -m venv .venv
 pip install -r requirements.txt
 
 
-## Step 3 – Start the Backend Server
+## ✅ STEP 2: Backend Setup (FastAPI)
 
-From the project root directory, start the FastAPI server:
+1. Create a Python virtual environment from the project root:
+
+python -m venv .venv
+
+2. Activate the virtual environment:
+
+Windows:
+.venv\Scripts\activate
+
+macOS / Linux:
+source .venv/bin/activate
+
+3. Install backend dependencies:
+
+pip install -r requirements.txt
+
+---
+
+## ✅ STEP 3: Start the Backend Server
+
+1. From the project root directory, start the FastAPI server:
 
 uvicorn backend.main:app --reload --port 8000
 
-The backend will run at:
+2. The backend will run at:
 
 http://127.0.0.1:8000
 
-API documentation will be available at:
+3. API documentation will be available at:
 
 http://127.0.0.1:8000/docs
 
 ---
 
-## Step 4 – Add Medical PDFs
+## ✅ STEP 4: Add Medical PDFs
 
-Place all medical PDFs (textbooks, notes, manuals) into the following directory:
+1. Place all medical PDFs (textbooks, notes, manuals) into the following directory:
 
 backend/data/pdfs/
 
-Example:
+2. Example:
 
 backend/data/pdfs/Applied_Human_Anatomy.pdf
 
@@ -102,13 +122,13 @@ These documents act as the knowledge source for the chatbot.
 
 ---
 
-## Step 5 – Ingest / Index PDFs
+## ✅ STEP 5: Ingest / Index PDFs
 
-Run the ingestion process to build the vector database:
+1. Run the ingestion process to build the vector database:
 
 python -c "from backend.rag.ingest import ingest_all_pdfs; print(ingest_all_pdfs())"
 
-Example output:
+2. Example output:
 
 {
   "status": "ok",
@@ -117,37 +137,7 @@ Example output:
   "chunks_added": 268
 }
 
-Indexing may take time for large medical textbooks. This is expected because the process involves PDF parsing, chunking, and embedding generation.
-
----
-
-## Step 6 – Frontend Setup and Run (React)
-
-Open a new terminal window, then run:
-
-cd frontend  
-npm install  
-npm run dev  
-
-The frontend will run at:
-
-http://localhost:5173
-
----
-
-## Using the Application
-
-Open the frontend in your browser
-
-Upload a medical PDF
-
-Click “Ingest PDFs”
-
-Select a study mode (Explain, Quiz, Flashcards, Grade)
-
-Ask questions based on the uploaded notes
-
-Receive answers with citations
+Indexing may take time for large medical textbooks. This is expected because the
 
 ---
 
