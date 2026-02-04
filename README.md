@@ -62,14 +62,6 @@ Install the following before starting:
 
 ---
 
-## ✅ STEP 2: Backend Setup (FastAPI)
-
-1. Create a Python virtual environment from the project root:
-
-```bash
-python -m venv .venv
-
-```
 
 ## ✅ STEP 2: Backend Setup (FastAPI)
 
