@@ -62,42 +62,43 @@ Install the following before starting:
 
 ---
 
-## Step 2 – Backend Setup (FastAPI)
-
-Create and activate a Python virtual environment and install dependencies:
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-
-
 ## ✅ STEP 2: Backend Setup (FastAPI)
 
 1. Create a Python virtual environment from the project root:
 
+```bash
 python -m venv .venv
 
+```
+
+## ✅ STEP 2: Backend Setup (FastAPI)
+
+1. Create a Python virtual environment from the project root:
+```bash
+python -m venv .venv
+```
 2. Activate the virtual environment:
 
 Windows:
+```bash
 .venv\Scripts\activate
-
+```
 macOS / Linux:
+```bash
 source .venv/bin/activate
-
+```
 3. Install backend dependencies:
-
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## ✅ STEP 3: Start the Backend Server
 
 1. From the project root directory, start the FastAPI server:
-
+```bash
 uvicorn backend.main:app --reload --port 8000
-
+```
 2. The backend will run at:
 
 http://127.0.0.1:8000
@@ -137,10 +138,30 @@ python -c "from backend.rag.ingest import ingest_all_pdfs; print(ingest_all_pdfs
   "chunks_added": 268
 }
 
-Indexing may take time for large medical textbooks. This is expected because the
+Indexing may take time for large medical textbooks. This is expected because the process involves PDF parsing, chunking, and embedding generation
 
 ---
+## ✅ STEP 6: Frontend Setup and Run (React)
 
+1. Open a new terminal window.
+
+2. Navigate to the frontend directory:
+```bash
+cd frontend
+```
+3. Install frontend dependencies:
+```bash
+npm install
+```
+4. Start the frontend development server:
+```bash
+npm run dev
+```
+5. The frontend will run at:
+```bash
+http://localhost:5173
+```
+---
 ## Study Modes
 
 Explain – Explains medical concepts grounded in the uploaded notes  
